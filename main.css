@@ -26,7 +26,7 @@ body::before {
 @media screen and (max-width: 992px) {
   body::before {
     opacity: 0.3;
-    background-size: 70vmax;
+    background-size: 65vmax;
   }
 }
 
@@ -34,13 +34,26 @@ body::before {
   background-color: #C5ABDC;
 }
 
+.custom-nav .navbar-brand img {
+  width: 30px;
+  height: 30px;
+  margin-top: -5px;
+}
+
+.custom-nav .navbar-brand span {
+  color: #F35CA3;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-left: .4rem;
+}
+
 .custom-nav #navbarNav .navbar-nav .nav-item .nav-link {
   color: #F35CA3;
   font-weight: 500;
   text-transform: uppercase;
   margin-left: 2.4em;
-  -webkit-transition: .3s color ease;
-  transition: .3s color ease;
+  -webkit-transition: .3s color ease-in;
+  transition: .3s color ease-in;
 }
 
 .custom-nav #navbarNav .navbar-nav .nav-item .nav-link::after {
@@ -58,8 +71,8 @@ body::before {
 
 .custom-nav #navbarNav .navbar-nav .nav-item .nav-link:hover::after {
   width: 50%;
-  -webkit-transition: width .3s ease;
-  transition: width .3s ease;
+  -webkit-transition: width .3s ease-in;
+  transition: width .3s ease-in;
 }
 
 @media screen and (max-width: 992px) {
@@ -69,24 +82,38 @@ body::before {
 }
 
 .custom-section {
-  margin: 7em 0 16em 0;
+  margin-top: 7em;
+  margin-bottom: 16em;
 }
 
-.custom-section h3 {
+.custom-section .sosial h3 {
   font-weight: 700;
   color: #F35CA3;
   white-space: nowrap;
   line-height: 1;
 }
 
-.custom-section h4 {
+.custom-section .sosial h4 {
   color: #AABDE6;
   white-space: nowrap;
   margin-top: 1em;
   margin-bottom: 2em;
 }
 
-.custom-section a {
+.custom-section .sosial .fab {
+  color: white;
+  font-size: 1.5em;
+  margin-left: 1em;
+  cursor: pointer;
+}
+
+.custom-section .sosial .fab:hover {
+  color: #C5ABDC;
+  -webkit-transition: .5s ease-in;
+  transition: .5s ease-in;
+}
+
+.custom-section .sosial a {
   display: inline-block;
   color: white;
   background-color: #F35CA3;
@@ -94,14 +121,38 @@ body::before {
   padding: .8em 1.3em;
   text-decoration: none;
   border: 1px solid transparent;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: .5s ease-in;
+  transition: .5s ease-in;
 }
 
-.custom-section a:hover {
+.custom-section .sosial a:hover {
   color: #F35CA3;
   border: 1px solid #F35CA3;
   background-color: transparent;
+}
+
+.custom-section .sosial span {
+  color: white;
+}
+
+.custom-section .cv {
+  margin-top: 1em;
+}
+
+.custom-section .cv a {
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
+}
+
+.custom-section .cv a:hover {
+  color: #C5ABDC;
+  -webkit-transition: .5s ease-in;
+  transition: .5s ease-in;
+}
+
+.custom-section .cv .fas {
+  margin-right: .5em;
 }
 
 @media screen and (max-width: 992px) {
@@ -171,6 +222,13 @@ body::before {
   background: transparent;
 }
 
+#card-illustration .flipIny {
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -webkit-animation-name: flipInY;
+  animation-name: flipInY;
+}
+
 #card-illustration h5, #card-illustration h6 {
   color: #AABDE6;
   text-align: center;
@@ -178,7 +236,6 @@ body::before {
 
 #card-projects h5 {
   margin-top: 4em;
-  margin-bottom: 1em;
   color: #F35CA3;
 }
 
@@ -193,13 +250,16 @@ body::before {
 #card-projects .row img {
   width: 100%;
   border-radius: .5em;
-  margin-bottom: 1rem;
+  margin-bottom: .5em;
+  margin-top: 1em;
 }
 
 #card-projects .row span {
   cursor: pointer;
-  -webkit-transition: .3s ease;
-  transition: .3s ease;
+  -webkit-transition: .3s ease-in;
+  transition: .3s ease-in;
+  padding-top: 3em;
+  margin-top: 10em;
 }
 
 #card-projects .row span:hover {
@@ -209,6 +269,9 @@ body::before {
 @media screen and (max-width: 992px) {
   #card-projects .row {
     margin-bottom: 5em;
+  }
+  #card-projects .row .row span {
+    padding-bottom: 2em;
   }
 }
 

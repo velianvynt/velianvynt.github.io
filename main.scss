@@ -8,16 +8,6 @@ $secondaryColor: #AABDE6;
 $tertiaryColor: #C5ABDC;
 $textColor: #393C43;
 
-// Mixin
-@mixin tombol {
-    display: inline-block;
-    color: white;
-    background-color: $primaryColor;
-    border-radius: .5em;
-    padding: .8em 1.3em;
-    text-decoration: none;
-}
-
 // Styles
 html {
     scroll-behavior: smooth;
@@ -43,7 +33,7 @@ body {
     
         @media screen and (max-width: 992px) {
             opacity: 0.3;
-            background-size: 70vmax;
+            background-size: 65vmax;
         }
     }
 }
@@ -53,6 +43,22 @@ body {
     .icon {
         background-color: $tertiaryColor;
     }
+
+    .navbar-brand {
+        img {
+            width: 30px;
+            height: 30px;
+            margin-top: -5px;
+        }
+
+        span {
+            color: $primaryColor;
+            font-weight: 700;
+            font-size: 1.4rem;
+            margin-left: .4rem;
+        }
+
+    }
     #navbarNav {
         .navbar-nav {
             .nav-item {
@@ -61,7 +67,7 @@ body {
                     font-weight: 500;
                     text-transform: uppercase;
                     margin-left: 2.4em;
-                    transition: .3s color ease;
+                    transition: .3s color ease-in;
 
                     &::after {
                         content: '';
@@ -78,7 +84,7 @@ body {
                    
                     &:hover::after {
                         width: 50%;
-                        transition: width .3s ease;
+                        transition: width .3s ease-in;
                     }
 
                     @media screen and (max-width: 992px) {
@@ -95,33 +101,79 @@ body {
 
 // custom section
 .custom-section {
-    margin: 7em 0 16em 0;
+    margin-top: 7em;
+    margin-bottom: 16em;
+    
+    .sosial {
 
-    h3 {
-        font-weight: 700;
-        color: $primaryColor;
-        white-space: nowrap;
-        line-height: 1;
+        h3 {
+            font-weight: 700;
+            color: $primaryColor;
+            white-space: nowrap;
+            line-height: 1;
+        }
+    
+        h4 {
+            color: $secondaryColor;
+            white-space: nowrap;
+            margin-top: 1em;
+            margin-bottom: 2em;
+        }
+    
+        .fab {
+            color: white;
+            font-size: 1.5em;
+            margin-left: 1em;
+            cursor: pointer;
+    
+            &:hover {
+                color: $tertiaryColor;
+                transition: .5s ease-in;
+            }
+        }
+    
+        a {
+            display: inline-block;
+            color: white;
+            background-color: $primaryColor;
+            border-radius: .5em;
+            padding: .8em 1.3em;
+            text-decoration: none;
+            border: 1px solid transparent;
+            transition: .5s ease-in;
+    
+            &:hover {
+                color: $primaryColor;   
+                border: 1px solid $primaryColor;
+                background-color: transparent;
+            }
+        }
+    
+        span {
+            color: white;
+        }
+    
     }
 
-    h4 {
-        color: $secondaryColor;
-        white-space: nowrap;
+    .cv {
         margin-top: 1em;
-        margin-bottom: 2em;
-    }
 
-    a {
-        @include tombol;
-        border: 1px solid transparent;
-        transition: .5s ease;
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 1em;
 
-        &:hover {
-            color: $primaryColor;   
-            border: 1px solid $primaryColor;
-            background-color: transparent;
+            &:hover{
+                color: $tertiaryColor;
+                transition: .5s ease-in;
+            }
+        }
+
+        .fas {
+            margin-right: .5em;
         }
     }
+
 
     @media screen and (max-width: 992px) {
         margin-top: 1em;
@@ -179,6 +231,13 @@ body {
 #card-illustration {
     background: transparent;
 
+    .flipIny {
+        -webkit-backface-visibility: visible !important;
+    backface-visibility: visible !important;
+    -webkit-animation-name: flipInY;
+    animation-name: flipInY
+    }
+
     h5, h6 {
         color: $secondaryColor;
         text-align: center;
@@ -190,7 +249,6 @@ body {
 
     h5 {
         margin-top: 4em;
-        margin-bottom: 1em;
         color: $primaryColor
     }
 
@@ -202,12 +260,15 @@ body {
         img {
             width: 100%;
             border-radius: .5em;
-            margin-bottom: 1rem;
+            margin-bottom: .5em;
+            margin-top: 1em;
         }
 
         span {
             cursor: pointer;
-            transition: .3s ease;
+            transition: .3s ease-in;
+            padding-top: 3em;
+            margin-top: 10em;
         }
 
         span:hover {
@@ -216,9 +277,15 @@ body {
 
         @media screen and (max-width: 992px) {
             margin-bottom: 5em;
+
+            .row {
+
+                span {
+                    padding-bottom: 2em;
+                }
+            }
         }
     }
-
 }
 
 
@@ -241,8 +308,6 @@ body {
             border-radius: .5em;
             margin-bottom: 1rem;
         }
-
-        
     }
 }
 
