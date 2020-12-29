@@ -336,4 +336,9 @@ body::before {
   text-align: center;
   line-height: .5;
 }
+
+#footer .disclaimer {
+  color: white;
+  font-size: .7em;
+}
 /*# sourceMappingURL=main.css.map */
